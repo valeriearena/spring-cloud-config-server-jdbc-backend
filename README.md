@@ -1,7 +1,11 @@
-# Sample Spring Boot Configuration Server & Client
+# Spring Cloud Configuration
+https://dzone.com/articles/creating-a-springboot-configuration-server-using-d
+
+# Example Spring Cloud Configuration Server & Client
+This repo is based on the following example:
 https://dzone.com/articles/spring-cloud-config-server-for-the-impatient
 
-## Sample Springboot Configuration Server
+# Quick Start
 - Crete the following table:
 ```
 CREATE TABLE [dbo].[properties](  
