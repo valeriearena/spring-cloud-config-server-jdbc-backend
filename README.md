@@ -3,7 +3,7 @@ https://dzone.com/articles/spring-cloud-config-server-for-the-impatient
 
 ## Sample Springboot Configuration Server
 - Crete the following table:
-
+```
 CREATE TABLE [dbo].[properties](  
 	[application] [nvarchar](200) NULL DEFAULT (NULL),  
 	[setting] [nvarchar](200) NULL DEFAULT (NULL),  
@@ -11,6 +11,7 @@ CREATE TABLE [dbo].[properties](
 	[profile] [nvarchar](200) NULL DEFAULT (NULL),  
 	[label] [nvarchar](200) NULL DEFAULT (NULL)  
 ) ON [PRIMARY]
+```
 
 - In configServer, update the JDBC URL in DatabaseConfiguration.
 
