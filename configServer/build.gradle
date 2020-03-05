@@ -1,0 +1,56 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.5.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 11
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	set('springCloudVersion', "Hoxton.SR1")
+}
+
+dependencies {
+	implementation 'org.springframework.cloud:spring-cloud-config-server'
+	implementation 'org.springframework.boot:spring-boot-starter-tomcat'
+
+	implementation ('org.springframework.boot:spring-boot-starter-data-jpa')
+
+	implementation ('org.springframework:spring-jdbc'){
+		exclude group: 'org.apache.tomcat', module: 'tomcat-jdbc'
+	}
+
+	implementation 'com.microsoft.sqlserver:mssql-jdbc:7.4.0.jre11'
+
+
+	// Autogenerate Java bytecode into your .class files using annotations.
+	compileOnly 'org.projectlombok:lombok:1.18.8'
+	annotationProcessor 'org.projectlombok:lombok:1.18.8'
+	implementation 'org.projectlombok:lombok:1.18.12'
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
+
+//The APR (Apache Portable Runtime) based Apache Tomcat Native library allows optimal performance in production environments.
+tasks.withType(org.springframework.boot.gradle.tasks.run.BootRun) {
+	systemProperty "java.library.path", "/usr/local/opt/tomcat-native/lib"
+}
