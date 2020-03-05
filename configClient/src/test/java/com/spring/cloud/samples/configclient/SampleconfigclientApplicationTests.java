@@ -1,4 +1,4 @@
-package com.aric.samples.configclient;
+package com.spring.cloud.samples.configclient;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.aric.samples;
+package com.spring.cloud.samples;
 
 /**
  * @author TTDKOC

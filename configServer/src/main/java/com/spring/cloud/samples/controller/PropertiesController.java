@@ -1,12 +1,12 @@
-package com.aric.samples.service;
+package com.spring.cloud.samples.controller;
 
 import java.net.URISyntaxException;
 import java.util.Optional;
 
 import javax.validation.Valid;
 
-import com.aric.samples.domain.Properties;
-import com.aric.samples.repository.PropertiesRepository;
+import com.spring.cloud.samples.domain.Properties;
+import com.spring.cloud.samples.repository.PropertiesRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api")
-public class PropertiesService {
+public class PropertiesController {
 
 	@Autowired
 	private PropertiesRepository repository;

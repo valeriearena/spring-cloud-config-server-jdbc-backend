@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.aric.samples.domain;
+package com.spring.cloud.samples.domain;
 
 import java.io.Serializable;
 

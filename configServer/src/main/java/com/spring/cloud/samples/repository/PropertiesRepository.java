@@ -1,9 +1,9 @@
-package com.aric.samples.repository;
+package com.spring.cloud.samples.repository;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.aric.samples.domain.Properties;
+import com.spring.cloud.samples.domain.Properties;
 
 import org.springframework.data.repository.CrudRepository;
 

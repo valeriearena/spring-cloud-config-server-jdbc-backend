@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.aric.samples.dev;
+package com.spring.cloud.samples.dev;
 
 import javax.sql.DataSource;
 
