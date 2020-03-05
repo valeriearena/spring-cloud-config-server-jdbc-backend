@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(path = "/api")
 @RefreshScope
-public class SampleApi {
+public class ClientController {
 
 	@Value("${sampleconfigclient.test1}")
 	private String aConf;
