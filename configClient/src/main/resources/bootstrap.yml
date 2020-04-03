@@ -1,9 +1,12 @@
+logging:
+  level:
+    root: INFO
 spring:
   application:
     name: sampleconfigclient
   cloud:
     config:
-      uri: http://localhost:8082
+      uri: http://localhost:8888
 management:
   endpoints:
     web:

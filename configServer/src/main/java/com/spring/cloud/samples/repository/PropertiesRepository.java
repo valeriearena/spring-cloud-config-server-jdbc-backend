@@ -1,16 +1,11 @@
 package com.spring.cloud.samples.repository;
 
+import com.spring.cloud.samples.domain.Properties;
+import org.springframework.data.repository.CrudRepository;
+
 import java.util.List;
 import java.util.Optional;
 
-import com.spring.cloud.samples.domain.Properties;
-
-import org.springframework.data.repository.CrudRepository;
-
-/**
- * @author TTDKOC
- *
- */
 public interface PropertiesRepository extends CrudRepository<Properties, Long> {
 
 	public List<Properties> findByApplication(String application);

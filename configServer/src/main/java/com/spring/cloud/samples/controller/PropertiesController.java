@@ -1,26 +1,14 @@
 package com.spring.cloud.samples.controller;
 
+import com.spring.cloud.samples.domain.Properties;
+import com.spring.cloud.samples.repository.PropertiesRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 import java.net.URISyntaxException;
 import java.util.Optional;
 
-import javax.validation.Valid;
-
-import com.spring.cloud.samples.domain.Properties;
-import com.spring.cloud.samples.repository.PropertiesRepository;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-/**
- * @author TTDKOC
- *
- */
 @RestController
 @RequestMapping("/api")
 public class PropertiesController {

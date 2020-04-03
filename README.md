@@ -26,7 +26,7 @@ CREATE TABLE [dbo].[properties](
 
 - Next create a sample configuration record using following `POST` request.
     ```
-    > curl -H "Content-Type: application/json" -d "{\"application\":\"sampleconfigclient\",\"profile\":\"default\",\"label\":\"master\",\"setting\":\"sampleconfigclient.test1\",\"value\":99}" -X POST http://localhost:8082/api/props
+    > curl -H "Content-Type: application/json" -d "{\"application\":\"sampleconfigclient\",\"profile\":\"default\",\"label\":\"master\",\"setting\":\"sampleconfigclient.test1\",\"value\":99}" -X POST http://localhost:8888/api/props
     ```
 
 - Now you try to run the following command inside configClient directory.
@@ -37,11 +37,9 @@ CREATE TABLE [dbo].[properties](
     ```
     > curl -X GET http://localhost:8080/api
     ```
-- Update the setting in the database:
+- Update the configuration record using following `PUT` request.
     ```
-    UPDATE [dbo].[properties]
-     SET [value] = '500'
-     WHERE [setting] = 'sampleconfigclient.test1'
+    > curl -H "Content-Type: application/json" -d "{\"application\":\"sampleconfigclient\",\"profile\":\"default\",\"label\":\"master\",\"setting\":\"sampleconfigclient.test1\",\"value\":100}" -X PUT http://localhost:8888/api/props
     ```
 - Execute the following curl to refresh the setting:
     ```

@@ -7,9 +7,9 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
 @EnableConfigServer
-public class DatabaseConfigurationServerApplication extends SpringBootServletInitializer{
+public class ServerConfigApplication extends SpringBootServletInitializer{
 
 	public static void main(String[] args) {
-		SpringApplication.run(DatabaseConfigurationServerApplication.class, args);
+		SpringApplication.run(ServerConfigApplication.class, args);
 	}
 }
