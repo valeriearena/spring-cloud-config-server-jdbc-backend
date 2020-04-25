@@ -1,4 +1,4 @@
-# Spring Cloud Configuration
+# spring-cloud-config-server-jdbc-backend
 https://dzone.com/articles/creating-a-springboot-configuration-server-using-d
 
 # Example Spring Cloud Configuration Server & Client
